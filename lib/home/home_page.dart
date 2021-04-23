@@ -60,8 +60,8 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 24),
                 Expanded(
                     child: GridView.count(
-                        crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
                         crossAxisCount: 2,
                         children: controller.quizzes!
                             .map((e) => QuizCardWidget(
@@ -75,6 +75,7 @@ class _HomePageState extends State<HomePage> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) => ChallengePage(
+                                                title: e.title,
                                                 questions: e.questions)));
                                   },
                                 ))
